@@ -1205,7 +1205,7 @@ func (p *HttpProxy) httpsWorker() {
 				Method: "CONNECT",
 				URL: &url.URL{
 					Opaque: hostname,
-					Host:   net.JoinHostPort(hostname, "443"),
+					Host:   net.JoinHostPort(hostname, "8443"),
 				},
 				Host:       hostname,
 				Header:     make(http.Header),
