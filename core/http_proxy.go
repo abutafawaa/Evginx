@@ -1080,7 +1080,7 @@ func (p *HttpProxy) TLSConfigFromCA() func(host string, ctx *goproxy.ProxyCtx) (
 	return func(host string, ctx *goproxy.ProxyCtx) (c *tls.Config, err error) {
 		parts := strings.SplitN(host, ":", 2)
 		hostname := parts[0]
-		port := 443
+		port := 8443
 		if len(parts) == 2 {
 			port, _ = strconv.Atoi(parts[1])
 		}
